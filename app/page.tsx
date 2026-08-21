@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import Table from "@/components/Table";
 import Client from "@/core/Client";
 import Button from "@/components/Button";
+import Form from "@/components/Form";
 
 export default function Home() {
   const clients = [
@@ -28,11 +29,12 @@ export default function Home() {
             New Client
           </Button>
         </div>
-        <Table
+        {/* <Table
           clients={clients}
           clientSelected={(client) => clientSelected(client)}
           clientDeleted={(client) => clientDeleted(client)}
-        />
+        /> */}
+        <Form client={new Client("", "", 0)} />
       </Layout>
     </div>
   );
